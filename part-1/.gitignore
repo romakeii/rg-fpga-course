@@ -1,0 +1,8 @@
+*
+!.gitignore
+!/*.odp
+!/*.pdf
+!/src/
+!/src/*.sv
+!/src/*.tcl
+!/src/*.sh
