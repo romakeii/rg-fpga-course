@@ -6,3 +6,5 @@
 !/src/*.sv
 !/src/*.tcl
 !/src/*.sh
+!/exercises
+!/exercises/*.sv
