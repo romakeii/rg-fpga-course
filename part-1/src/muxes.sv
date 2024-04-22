@@ -5,9 +5,9 @@ module mux_proc_if_2_to_1 (
 
 	always@(*) begin // ПРОЦЕДУРНЫЙ БЛОК // для данного модуля аналогично always@(dat_a or dat_b or sel)
 		if(sel) begin
-			dat_o = dat_a; // БЛОКИРУЮЩЕЕ ПРИСВАИВАНИЕ (BLOCKING ASSIGNMENT)
+			dat_o = dat_b; // БЛОКИРУЮЩЕЕ ПРИСВАИВАНИЕ (BLOCKING ASSIGNMENT)
 		end else begin
-			dat_o = dat_b;
+			dat_o = dat_a;
 		end
 	end
 
@@ -84,12 +84,12 @@ module mux_proc_case_4_to_1_weird (
 			2'b01   : dat_o = dat_i[2'b01];
 			2'b10,
 			2'b11   : dat_o = dat_i[2'b10];
-			default : dat_o = 4'b1111;
-			// Если не использовать "default", можно написать на первой строке always блока "dat_o = 4'b1111", по аналогии с модулем mux_always_if_4_to_1_weird,
+			default : dat_o = 1;
+			// Если не использовать "default", можно написать на первой строке always блока "dat_o = 1", по аналогии с модулем mux_always_if_4_to_1_weird,
 			// но назначить все выходы ДЛЯ ВСЕХ УСЛОВИЙ каким-нибудь из способов НЕОБХОДИМО, если мы описываем КОМБИНАЦИОННУЮ ЛОГИКУ
 		endcase
 		// Данный мультиплексор будет выдавать на выходе следующие значения:
-		// 15 (4'b1111) при sel == 0
+		// 1			 при sel == 0
 		// dat_i[1]     при sel == 1
 		// dat_i[2]     при sel == 2
 		// dat_i[2]     при sel == 3
