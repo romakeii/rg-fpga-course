@@ -8,3 +8,5 @@
 !/src/*.sh
 !/exercises
 !/exercises/*.sv
+!/exercises-solved
+!/exercises-solved/*.sv
