@@ -9,3 +9,8 @@
 !/exercises
 !/exercises/*.sv
 !/exercises/*.txt
+!/exercises_solved/
+!/exercises_solved/*.sv
+!/exercises_solved/*.svh
+!/exercises_solved/*.txt
+!/exercises_solved/*.pdf
