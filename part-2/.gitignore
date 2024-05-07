@@ -8,3 +8,6 @@
 !/src/*.sh
 !/exercises
 !/exercises/*.sv
+!/exercises_solved
+!/exercises_solved/*.sv
+!/exercises_solved/*.svh
