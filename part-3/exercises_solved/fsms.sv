@@ -8,7 +8,7 @@ module mealy (
     output logic z
 );
 
-    enum logic [1:0] {S0, S1, S2}  state; // По-умолчанию значения начинаются с 0 (S0 = 0, S1 = 1, ...)
+    enum logic [1:0] {S0, S1, S2}  state; // // По-умолчанию значения начинаются с 0 (S0 = 0, S1 = 1, ...)
 
     always @(posedge clk) begin
         if (rst) begin
@@ -63,17 +63,18 @@ module moore(
     else begin
         case (state)
             S0: begin
-                if(a)     state <= b ? S1 : S2;
+                if(a)     state <= b ? S3 : S2;
             end
-            S1, S2: begin
-                if(a)     state <= S3;
+            S1: begin
+                if(a)     state <= b ? S3 : S2;
                 else      state <= S0;
+            end            
+            S2: begin
+                if(a)     state <= S3;
+                else      state <= b ? S1 : S0;
             end
             S3: begin
-                if(!a) begin
-                    if(b) state <= S1;
-                    else  state <= S2;
-                end
+                if(!a)    state <=  b ? S1 : S0;
             end
             default: begin
                 state <= S0;
