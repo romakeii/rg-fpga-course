@@ -30,7 +30,7 @@ module srl_bit #(
         if(rst)
             shft_reg <= 0;
         else
-            shft_reg <= {shft_reg[CLK_CYCL - 2 : 0], in};
+            shft_reg <= {shft_reg, in};
     end
 
     assign out = shft_reg[CLK_CYCL - 1];
