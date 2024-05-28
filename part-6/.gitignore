@@ -1,4 +1,9 @@
 *
 !.gitignore
+!
 !/*.odp
 !/*.pdf
+!/exercises
+!/exercises/*.sv
+!/exercises/*.txt
+!/exercises/*.xdc
