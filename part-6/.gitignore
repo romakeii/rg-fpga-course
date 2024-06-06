@@ -6,3 +6,7 @@
 !/exercises/*.sv
 !/exercises/*.txt
 !/exercises/*.xdc
+!/exercises_solved
+!/exercises_solved/*.sv
+!/exercises_solved/*.txt
+!/exercises_solved/*.xdc
