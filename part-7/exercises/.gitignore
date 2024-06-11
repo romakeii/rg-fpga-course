@@ -9,9 +9,11 @@
 !/model
 /model/*
 !/model/.gitkeep
+!/model/*.py
 
 !/scripts
 !/scripts/*.tcl
+!/scripts/*.sh
 
 !/src
 !/src/core
